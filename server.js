@@ -133,10 +133,10 @@ app.post('/api/compress-video', upload.single('file'), (req, res) => {
     .save(outputPath)
 })
 
-app.listen(port, (err) => {
-  if (err) {
-    console.error('Failed to start server:', err.message)
-    process.exit(1)
-  }
-  console.log(`Server running at http://localhost:${port}`)
-})
+// app.listen(port, (err) => {
+//   if (err) {
+//     console.error('Failed to start server:', err.message)
+//     process.exit(1)
+//   }
+//   console.log(`Server running at http://localhost:${port}`)
+// })

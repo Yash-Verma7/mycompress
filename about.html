@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About mycompress - Our Mission and Story</title>
+    <meta name="description" content="Learn about mycompress, the 100% free, client-side browser suite for PDF, image, and video compression.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { padding: 120px 20px 60px; text-align: center; background: var(--surface-color); border-bottom: 1px solid var(--border-color); }
+        .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-content { padding: 60px 0; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+        .page-content h2 { margin: 40px 0 20px; font-size: 2rem; }
+        .page-content p { margin-bottom: 20px; color: var(--text-secondary); font-size: 1.1rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 60px 0; }
+        .stat-card { background: var(--bg-color); border: 1px solid var(--border-color); padding: 30px; border-radius: var(--border-radius-md); text-align: center; }
+        .stat-card h3 { font-size: 2.5rem; color: var(--teal-main); margin-bottom: 10px; font-family: 'Outfit'; }
+        .stat-card p { color: var(--text-primary); font-weight: 600; margin: 0; font-size: 1rem; }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#tools" class="nav-link">Tools</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+                <button class="hamburger-menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1>About mycompress</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary);">Redefining file management on the web.</p>
+    </header>
+
+    <main class="container page-content">
+        <h2>Our Mission</h2>
+        <p>At <strong>mycompress</strong>, our mission is simple: to provide the most powerful, secure, and user-friendly file manipulation tools on the internet—absolutely free of charge. We believe that basic document needs shouldn't require monthly subscriptions, hidden fees, or invasive data collection.</p>
+        
+        <h2>How It Works: 100% Client-Side</h2>
+        <p>Unlike traditional online converters that force you to upload your sensitive documents to a remote server, mycompress utilizes cutting edge web technologies (like WebAssembly and Canvas APIs) to process your files directly inside your browser.</p>
+        <p>This means your files never leave your device. It's not just faster; it's a fundamental guarantee of your privacy.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>10M+</h3>
+                <p>Files Processed</p>
+            </div>
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Free Tools</p>
+            </div>
+            <div class="stat-card">
+                <h3>190+</h3>
+                <p>Countries Reached</p>
+            </div>
+        </div>
+        
+        <h2>Why We Built This</h2>
+        <p>The internet is filled with "free" PDF tools that bait-and-switch users. You edit your document, only to find you hit a "daily limit," or you're required to create an account to download your file. We grew tired of this deceptive practice.</p>
+        <p>mycompress was built by a small, passionate team to offer an honest alternative. No limits. No sign-ups. No watermarks. Just pure utility.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+                </a>
+                <p class="tagline">Free tools for everyone.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p class="credit-line">@created by yash verma</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 mycompress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

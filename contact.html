@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - mycompress</title>
+    <meta name="description" content="Get in touch with the mycompress team. We're here to help with your file compression needs.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { padding: 120px 20px 60px; text-align: center; background: var(--surface-color); border-bottom: 1px solid var(--border-color); }
+        .page-hero h1 { font-size: 3.5rem; margin-bottom: 20px; background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        @media (max-width: 768px) { .contact-layout { grid-template-columns: 1fr; } }
+        
+        .contact-info { display: flex; flex-direction: column; gap: 30px; }
+        .info-card { background: var(--surface-color); padding: 30px; border-radius: var(--border-radius-md); border: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 20px; }
+        .info-card i { font-size: 2rem; color: var(--teal-main); }
+        .info-card h3 { margin-bottom: 5px; }
+        .info-card p { color: var(--text-secondary); margin: 0; }
+        
+        .contact-form { background: var(--surface-color); padding: 40px; border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); }
+        .contact-form h2 { margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-secondary); }
+        .form-group input, .form-group textarea { width: 100%; padding: 15px; border-radius: var(--border-radius-sm); background: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-primary); font-family: inherit; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--teal-main); outline: none; }
+        
+        /* FAQ Section */
+        .faq-section { max-width: 800px; margin: 0 auto 80px; padding: 0 20px; }
+        .faq-section h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+        .faq-accordion .accordion { margin-bottom: 15px; border: 1px solid var(--border-color); }
+        .faq-accordion .accordion-header { background: var(--surface-color); }
+        
+        /* Success Message */
+        #success-msg { display: none; text-align: center; padding: 40px; }
+        #success-msg i { font-size: 4rem; color: var(--teal-main); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+                <button class="hamburger-menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1>Get in Touch</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary);">We'd love to hear from you. Reach out with any questions or feedback.</p>
+    </header>
+
+    <main>
+        <div class="contact-layout">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>support@mycompress.test</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Global Remote Team</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h3>Response Time</h3>
+                        <p>Within 24-48 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div id="form-container">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" id="subject" required placeholder="How can we help?">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" rows="5" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-process pulse-btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                <div id="success-msg">
+                    <i class="fa-solid fa-paper-plane" style="animation: popIn 0.5s ease forwards"></i>
+                    <h2>Message Sent!</h2>
+                    <p style="color: var(--text-secondary);">Thank you for reaching out. We will get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <div class="accordion">
+                    <div class="accordion-header" onclick="this.parentElement.classList.toggle('open'); let b = this.nextElementSibling; b.style.maxHeight = this.parentElement.classList.contains('open') ? b.scrollHeight + 'px' : '0px';">
+                        <span>Is mycompress really free?</span>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-body" style="max-height: 0; overflow: hidden; transition: max-height 0.3s; background: var(--bg-color);">
+                        <div class="accordion-body-inner" style="padding: 20px; color: var(--text-secondary);">
+                            Yes! Every single tool on our platform is 100% free to use with no hidden costs or limits.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header" onclick="this.parentElement.classList.toggle('open'); let b = this.nextElementSibling; b.style.maxHeight = this.parentElement.classList.contains('open') ? b.scrollHeight + 'px' : '0px';">
+                        <span>Do you save my files on your servers?</span>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-body" style="max-height: 0; overflow: hidden; transition: max-height 0.3s; background: var(--bg-color);">
+                        <div class="accordion-body-inner" style="padding: 20px; color: var(--text-secondary);">
+                            No. All file processing happens locally within your internet browser. We do not upload, store, or share your files.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="this.parentElement.classList.toggle('open'); let b = this.nextElementSibling; b.style.maxHeight = this.parentElement.classList.contains('open') ? b.scrollHeight + 'px' : '0px';">
+                        <span>Is there a file size limit?</span>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-body" style="max-height: 0; overflow: hidden; transition: max-height 0.3s; background: var(--bg-color);">
+                        <div class="accordion-body-inner" style="padding: 20px; color: var(--text-secondary);">
+                            No! Since processing runs on your own device, you're only limited by your computer's RAM and processing power.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+                </a>
+                <p class="tagline">Free tools for everyone.</p>
+                <div class="credit-line">@created by yash verma</div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 mycompress.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+            
+            // Simulate network request
+            setTimeout(() => {
+                document.getElementById('form-container').style.display = 'none';
+                const successMsg = document.getElementById('success-msg');
+                successMsg.style.display = 'block';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

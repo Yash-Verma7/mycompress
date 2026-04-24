@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mycompress - Free PDF Tools, Compress, Convert & Optimize</title>
+    <meta name="description" content="Free online tools to compress PDF, images, video, and more. 100% free, no signup, no upload limits. Works entirely in your browser.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compress logo-icon"></i>
+                <span class="logo-text">mycompress</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Drawer (Hidden by default) -->
+        <div class="mobile-menu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="#tools" class="nav-link">Tools</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="privacy.html" class="nav-link">Privacy</a>
+            <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-mesh"></div>
+        <div class="floating-icons">
+            <i class="fa-regular fa-file-pdf float-icon icon-1"></i>
+            <i class="fa-regular fa-file-image float-icon icon-2"></i>
+            <i class="fa-regular fa-file-word float-icon icon-3"></i>
+            <i class="fa-solid fa-box-archive float-icon icon-4"></i>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Free PDF Tools — Compress, Convert & Optimize Anything Online</h1>
+            <p class="hero-subtitle">100% Free. No signup. No upload limits. Works securely in your browser.</p>
+            <div class="hero-buttons">
+                <a href="#tools" class="btn btn-primary">
+                    <span>Explore Tools</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button class="btn btn-secondary" onclick="openToolModal('compress-pdf')">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Compress PDF Now</span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#seo-content">
+                <i class="fa-solid fa-chevron-down bounce"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- SEO Content Section -->
+    <section id="seo-content" class="seo-section fade-in-section">
+        <div class="container">
+            <div class="seo-wrapper">
+                <div class="seo-text">
+                    <h2>The Best Free PDF Tools You'll Ever Need</h2>
+                    <p>Welcome to <strong>mycompress</strong>, your ultimate all-in-one suite for managing documents, images, and videos online. We believe premium tools should be accessible to everyone, which is why our service is completely free with absolutely no hidden fees.</p>
+                    <p>Whether you need to aggressively compress large PDF files, convert documents to Word, format images, or even shrink video sizes, our robust platform handles everything directly within your browser. By utilizing advanced client-side processing, your files never leave your device.</p>
+                </div>
+                <div class="seo-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-infinity"></i></div>
+                        <div class="feature-desc">
+                            <h4>No file size limit</h4>
+                            <p>Process massive files without any artificial restrictions.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="feature-desc">
+                            <h4>100% Private</h4>
+                            <p>Everything happens locally. We don't upload your data.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <div class="feature-desc">
+                            <h4>Works Offline</h4>
+                            <p>Once loaded, process files even without an active connection.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="feature-desc">
+                            <h4>All formats supported</h4>
+                            <p>PDF, JPG, PNG, MP4, DOCX, and many more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid Section -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2>All Free Tools</h2>
+                <p>Select a tool below to start compressing and converting instantly.</p>
+            </div>
+            
+            <!-- We will generate the grid dynamically or hardcode it. Better to hardcode for SEO. -->
+            <div class="tools-grid">
+                
+                <!-- PDF Tools -->
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('compress-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-compress tool-icon"></i>
+                    </div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce file size while maintaining quality.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('pdf-to-word')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-file-word tool-icon"></i>
+                    </div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF documents to editable DOCX format.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('pdf-to-jpg')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-image tool-icon"></i>
+                    </div>
+                    <h3>PDF to JPG</h3>
+                    <p>Extract all PDF pages as high-quality JPG images.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('jpg-to-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-images tool-icon"></i>
+                    </div>
+                    <h3>JPG to PDF</h3>
+                    <p>Merge multiple images into a single PDF document.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('merge-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-object-group tool-icon"></i>
+                    </div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDFs into one unified document.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('split-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-scissors tool-icon"></i>
+                    </div>
+                    <h3>Split PDF</h3>
+                    <p>Separate PDF pages or extract a specific range.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('rotate-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-rotate-right tool-icon"></i>
+                    </div>
+                    <h3>Rotate PDF</h3>
+                    <p>Rotate pages within your PDF to the correct orientation.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('unlock-pdf')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-lock-open tool-icon"></i>
+                    </div>
+                    <h3>Unlock PDF</h3>
+                    <p>Remove passwords and restrictions from your PDFs.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('pdf-to-png')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-image tool-icon"></i>
+                    </div>
+                    <h3>PDF to PNG</h3>
+                    <p>Save PDF pages as transparent PNG images.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card pdf-card fade-in-section" onclick="openToolModal('remove-pages')">
+                    <div class="badge badge-pdf">PDF</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-eraser tool-icon"></i>
+                    </div>
+                    <h3>Remove Pages</h3>
+                    <p>Delete unwanted pages from a PDF document.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Image Tools -->
+                <div class="tool-card image-card fade-in-section" onclick="openToolModal('compress-image')">
+                    <div class="badge badge-image">Image</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-down-left-and-up-right-to-center tool-icon"></i>
+                    </div>
+                    <h3>Compress Image</h3>
+                    <p>Reduce JPG, PNG, and WEBP file sizes efficiently.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="tool-card image-card fade-in-section" onclick="openToolModal('resize-image')">
+                    <div class="badge badge-image">Image</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-expand tool-icon"></i>
+                    </div>
+                    <h3>Resize Image</h3>
+                    <p>Change image dimensions by pixels or percentage.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card image-card fade-in-section" onclick="openToolModal('convert-image')">
+                    <div class="badge badge-image">Image</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-shuffle tool-icon"></i>
+                    </div>
+                    <h3>Convert Image</h3>
+                    <p>Convert seamlessly between JPG, PNG, and WEBP.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card image-card fade-in-section" onclick="openToolModal('crop-image')">
+                    <div class="badge badge-image">Image</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-crop tool-icon"></i>
+                    </div>
+                    <h3>Crop Image</h3>
+                    <p>Trim outer edges or set precise aspect ratios.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card image-card fade-in-section" onclick="openToolModal('bulk-image-compress')">
+                    <div class="badge badge-image">Image</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-layer-group tool-icon"></i>
+                    </div>
+                    <h3>Bulk Image Compress</h3>
+                    <p>Batch shrink dozens of photos at once locally.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Document Tools -->
+                <div class="tool-card doc-card fade-in-section" onclick="openToolModal('compress-docx')">
+                    <div class="badge badge-doc">Document</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-file-zipper tool-icon"></i>
+                    </div>
+                    <h3>DOCX Compressor</h3>
+                    <p>Shrink Word documents containing heavy images.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card doc-card fade-in-section" onclick="openToolModal('docx-to-pdf')">
+                    <div class="badge badge-doc">Document</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-file-pdf tool-icon"></i>
+                    </div>
+                    <h3>DOCX to PDF</h3>
+                    <p>Convert Microsoft Word directly into PDF format.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card doc-card fade-in-section" onclick="openToolModal('txt-to-pdf')">
+                    <div class="badge badge-doc">Document</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-file-lines tool-icon"></i>
+                    </div>
+                    <h3>TXT to PDF</h3>
+                    <p>Turn plain text files into clean PDF documents.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="tool-card doc-card fade-in-section" onclick="openToolModal('pdf-to-txt')">
+                    <div class="badge badge-doc">Document</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-quote-left tool-icon"></i>
+                    </div>
+                    <h3>PDF to TXT</h3>
+                    <p>Extract all text content from any PDF file.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Video Tools -->
+                <div class="tool-card video-card fade-in-section" onclick="openToolModal('video-compress')">
+                    <div class="badge badge-video">Video</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-film tool-icon"></i>
+                    </div>
+                    <h3>Video Compressor</h3>
+                    <p>Reduce MP4 and WebM file size without losing quality.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card video-card fade-in-section" onclick="openToolModal('video-to-gif')">
+                    <div class="badge badge-video">Video</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-photo-film tool-icon"></i>
+                    </div>
+                    <h3>Video to GIF</h3>
+                    <p>Convert video clips into animated GIF files.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="tool-card video-card fade-in-section" onclick="openToolModal('extract-frame')">
+                    <div class="badge badge-video">Video</div>
+                    <div class="tool-icon-container">
+                        <i class="fa-solid fa-camera tool-icon"></i>
+                    </div>
+                    <h3>Extract Frame</h3>
+                    <p>Capture high-res screen grabs from any video.</p>
+                    <button class="btn-use-tool">Use Tool <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Full-Screen Overlay Modal Container -->
+    <div id="tool-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i id="modal-icon" class="fa-solid fa-cogs tool-icon"></i>
+                    <h2 id="modal-heading">Tool Name</h2>
+                </div>
+                <button class="close-modal" aria-label="Close" onclick="closeToolModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Step 1: Upload -->
+                <div id="step-upload" class="step-container active">
+                    <div class="drop-zone" id="drop-zone">
+                        <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+                        <span class="drop-text">Drag & drop your file here or click to browse</span>
+                        <input type="file" id="file-input" class="file-input" hidden>
+                    </div>
+                </div>
+
+                <!-- Step 2: Settings & Processing -->
+                <div id="step-process" class="step-container" style="display: none;">
+                    
+                    <div class="file-info-preview">
+                        <div class="preview-thumb" id="preview-thumb"></div>
+                        <div class="file-details">
+                            <h4 id="file-name">filename.pdf</h4>
+                            <p id="file-meta">PDF • 5.4 MB</p>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Settings Area injected per tool -->
+                    <div class="advanced-settings accordion" id="advanced-settings-accordion">
+                        <div class="accordion-header" onclick="toggleSettingsAccordion()">
+                            <span><i class="fa-solid fa-gear"></i> Advanced Settings</span>
+                            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                        </div>
+                        <div class="accordion-body" id="dynamic-settings-content">
+                            <!-- Tool-specific settings injected here via JS -->
+                        </div>
+                    </div>
+
+                    <button class="btn-process pulse-btn" id="btn-process" onclick="startProcessing()">
+                        Process File
+                    </button>
+
+                    <div class="progress-container" id="progress-container" style="display: none;">
+                        <span class="progress-text" id="progress-text">Processing...</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill shimmer" id="progress-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Result -->
+                <div id="step-result" class="step-container" style="display: none;">
+                    <div class="result-box">
+                        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3>Success!</h3>
+                        
+                        <div class="compare-stats">
+                            <div class="stat">
+                                <span class="stat-label">Original</span>
+                                <span class="stat-val" id="orig-size">5.4 MB</span>
+                            </div>
+                            <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="stat">
+                                <span class="stat-label">New Size</span>
+                                <span class="stat-val" id="new-size" style="color: var(--primary);">1.2 MB</span>
+                            </div>
+                        </div>
+
+                        <div class="result-actions">
+                            <button class="btn-download" id="btn-download">
+                                <i class="fa-solid fa-download"></i> Download File
+                            </button>
+                            <button class="btn-outline" onclick="resetToolModal()">
+                                Process Another
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-compress logo-icon"></i>
+                    <span class="logo-text">mycompress</span>
+                </a>
+                <p class="tagline">Free tools for everyone.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p class="credit-line">@created by yash verma</p>
+            </div>
+            <div class="footer-col">
+                <h4>PDF Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="openToolModal('compress-pdf'); return false;">Compress PDF</a></li>
+                    <li><a href="#" onclick="openToolModal('pdf-to-word'); return false;">PDF to Word</a></li>
+                    <li><a href="#" onclick="openToolModal('merge-pdf'); return false;">Merge PDF</a></li>
+                    <li><a href="#" onclick="openToolModal('split-pdf'); return false;">Split PDF</a></li>
+                    <li><a href="#" onclick="openToolModal('pdf-to-jpg'); return false;">PDF to JPG</a></li>
+                    <li><a href="#" onclick="openToolModal('jpg-to-pdf'); return false;">JPG to PDF</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Other Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="openToolModal('compress-image'); return false;">Compress Image</a></li>
+                    <li><a href="#" onclick="openToolModal('resize-image'); return false;">Resize Image</a></li>
+                    <li><a href="#" onclick="openToolModal('docx-to-pdf'); return false;">DOCX to PDF</a></li>
+                    <li><a href="#" onclick="openToolModal('video-compress'); return false;">Video Compressor</a></li>
+                    <li><a href="#" onclick="openToolModal('bulk-image-compress'); return false;">Bulk Compress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 mycompress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/compress-image.js"></script>
+    <script src="js/compress-pdf.js"></script>
+    <script src="js/compress-video.js"></script>
+    <!-- Add other tool scripts dynamically or here -->
+</body>
+</html>

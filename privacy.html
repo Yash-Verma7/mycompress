@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - mycompress</title>
+    <meta name="description" content="Read the privacy policy of mycompress. We value your privacy and process all files securely through client-side technology.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero { padding: 100px 20px 40px; text-align: center; background: var(--surface-color); border-bottom: 1px solid var(--border-color); }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        
+        .legal-layout { display: flex; gap: 40px; max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        
+        .sidebar { flex: 0 0 250px; position: sticky; top: 100px; height: max-content; }
+        .sidebar ul { list-style: none; border-left: 2px solid var(--border-color); padding-left: 20px; }
+        .sidebar li { margin-bottom: 15px; }
+        .sidebar a { color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
+        .sidebar a:hover, .sidebar a.active { color: var(--teal-main); }
+        
+        .content { flex: 1; line-height: 1.8; color: var(--text-secondary); }
+        .content h2 { color: var(--text-primary); margin: 50px 0 20px; font-size: 2rem; }
+        .content h2:first-child { margin-top: 0; }
+        .content p { margin-bottom: 20px; font-size: 1.05rem; }
+        .last-updated { font-style: italic; margin-bottom: 40px; display: block; }
+        
+        @media (max-width: 768px) {
+            .legal-layout { flex-direction: column; }
+            .sidebar { position: static; border-left: none; padding-left: 0; margin-bottom: 40px; }
+            .sidebar ul { display: flex; flex-wrap: wrap; gap: 15px; border-left: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+                <button class="hamburger-menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1>Privacy Policy</h1>
+        <p style="color: var(--text-secondary);">Your privacy is our top priority.</p>
+    </header>
+
+    <main class="legal-layout">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#data-collection">2. Data Collection</a></li>
+                    <li><a href="#client-side">3. Client-Side Processing</a></li>
+                    <li><a href="#cookies">4. Cookies</a></li>
+                    <li><a href="#third-parties">5. Third Parties</a></li>
+                    <li><a href="#your-rights">6. Your Rights</a></li>
+                    <li><a href="#contact">7. Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="content">
+            <span class="last-updated">Last Updated: October 2025</span>
+
+            <h2 id="introduction">1. Introduction</h2>
+            <p>Welcome to <strong>mycompress</strong>. We respect your privacy and are deeply committed to protecting your personal data. This privacy policy will inform you about how we handle any information when you visit our website, regardless of where you visit it from, and tell you about your privacy rights.</p>
+            <p>Because mycompress relies on client-side browser technology rather than server-side uploads, our privacy footprint is exceptionally small. Read on to understand exactly how our tool operates.</p>
+
+            <h2 id="data-collection">2. Data Collection</h2>
+            <p>When you use mycompress, we collect absolutely zero information regarding the files you compress, merge, convert, or otherwise manipulate. We do not require you to create an account, register an email address, or provide a payment method.</p>
+            <p>Like almost all websites, we may automatically collect standard anonymous analytics data to help us improve the platform. This encompasses browser type, operating system, and general geographic region (country level), but never personally identifiable information (PII).</p>
+
+            <h2 id="client-side">3. Client-Side Processing</h2>
+            <p>The core technology behind mycompress is known as "Client-Side Processing." This means that when you drag and drop a PDF, Image, or Video file into our tools, the file is never uploaded to an external server.</p>
+            <p>Instead, JavaScript libraries powered by WebAssembly run directly inside your web browser using your device's memory. Once the compression or conversion is complete, the file is saved locally to your hard drive. <strong>We technically have zero capability to view, store, copy, or share your files.</strong></p>
+
+            <h2 id="cookies">4. Cookies and Local Storage</h2>
+            <p>We use local storage strictly for functional purposes. For example, when you toggle the website's Dark/Light mode, we store that preference in your browser's local storage so the site remains in your preferred theme the next time you visit.</p>
+            <p>We do not use tracking cookies for targeted advertising or cross-site tracking. Any cookies used are strictly essential for the core functionality of the website.</p>
+
+            <h2 id="third-parties">5. Third Parties</h2>
+            <p>mycompress utilizes reliable third-party Content Delivery Networks (CDNs), such as Cloudflare or unpkg, to serve the open-source libraries that power our tools (e.g., pdf-lib, ffmpeg.wasm). Your browser requests these libraries directly from the CDNs.</p>
+            <p>We will never sell, swap, rent, or otherwise distribute your personal data (should any be collected via a contact form) to a third party for marketing purposes.</p>
+
+            <h2 id="your-rights">6. Your Rights</h2>
+            <p>Depending on your location, you may have certain rights under data protection legislation, including the GDPR or CCPA. Because our service processes your files locally and does not collect an account profile, there is typically no personal data held on our servers to request or delete.</p>
+
+            <h2 id="contact">7. Contact Us</h2>
+            <p>If you have any questions about this privacy policy, or if you wish to exercise any of your rights regarding personal data, please contact us via our Contact Page or email us directly at privacy@mycompress.test.</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-compress logo-icon"></i><span class="logo-text">mycompress</span>
+                </a>
+                <p class="tagline">Free tools for everyone.</p>
+                <div class="credit-line">@created by yash verma</div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+                <p class="copyright">&copy; 2025 mycompress.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple scroll spy for sidebar
+        const links = document.querySelectorAll('.sidebar a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
